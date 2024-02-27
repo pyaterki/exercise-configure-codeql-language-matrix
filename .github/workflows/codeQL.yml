@@ -13,6 +13,11 @@ jobs:
       security-events: write
       actions: read
       contents: read
+      
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'python' ]
 
     steps:
       - name: Checkout repository
